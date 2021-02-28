@@ -13,10 +13,7 @@ The purpose of this project is to explore deep learning techniques and CNNs in o
 
 According to the CDC, malaria is, "...a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans." In short, when an individual becomes infected, the parasite matures in the liver, and then move to red blood cells which eventually rupture and start their lifecycle over again. Those with malaria generally develop mild to severe fever and flu-like symptoms; in some cases, serious complications occur that can be life-threatening such as blood clots, severe anemia, seizures, and comas. Each year, nearly 290 million people become infected with malaria, and over 400,000 end up dying from the disease (MayoClinic, 2021). 
 
-![image](https://user-images.githubusercontent.com/70441161/109417115-77a45d00-797f-11eb-81da-b1640ceda95f.png)
-
-
-
+![image](https://user-images.githubusercontent.com/70441161/109417310-5001c480-7980-11eb-998d-7488beb4248b.png)
 
 In order to diagnose a patient, a blood test is required. The blood sample is then plated, dyed, and then analyzed under a microscope-- a process that can sometimes take over an hour (Thomson, 2019). Additionally, it usually takes skilled professionals to complete the process and finally diagnose. In underdeveloped, underserved areas where malaria is most prominent, the wait for a diagnosis could increase the risk for serious complications.
 
