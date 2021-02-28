@@ -19,3 +19,7 @@ In order to diagnose a patient, a blood test is required. The blood sample is th
 
 One way that could help diagnose the disease is through machine learning and automation. Training a machine that can quickly and accurately predict infection would have many benefits. It would increase efficiency and accuracy, reduce cost, and increase care.
 
+
+# References
+
+![image](https://user-images.githubusercontent.com/70441161/109417776-3f524e00-7982-11eb-99a0-93b0caff0e74.png)
