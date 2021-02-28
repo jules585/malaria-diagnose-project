@@ -1,0 +1,126 @@
+#import tensorflow as tf #Import Tensorflow with alias tf
+
+from tensorflow.keras import Sequential #Import Sequential model/API
+from tensorflow.keras.layers import Flatten, Dense, Conv2D, MaxPool2D, Dropout #Import APIs that will be used in layer building
+from tensorflow.keras.models import Model, load_model
+
+from tensorflow.keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array #Import image data augmentation class which enables images in the dataset to be edited
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras import optimizers #Import optimizers that will help train the model
+from tensorflow.keras.applications.resnet50 import preprocess_input
+
+print(tf.__version__) #Verify the Tensorflow import by printing the version
+
+#Importing other required APIs
+import numpy as np
+from glob import glob
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
+
+#Path for downloaded Kaggle dataset
+directory = "/home/julia/datasets/cell_images"
+
+#Set image size
+IMAGE_SIZE = [224, 224]
+
+#Allow for rescaling all images to the same, desired range; split the dataset into an 80%/20% ratio between training data and validation data.
+train_datagen = ImageDataGenerator(rescale=1./255, 
+                                   validation_split=0.2,
+                                   shear_range=0.2,
+                                   zoom_range=0.2,
+                                   horizontal_flip=True)
+                                  
+#Creating separate datasets for training and for validation
+train_set = train_datagen.flow_from_directory(directory='/home/julia/datasets/cell_images',
+                                              target_size = (224, 224),
+                                              class_mode = 'categorical',
+                                              batch_size = 32,
+                                              subset = 'training'
+                                              )
+                                                  
+                                                  
+#Validation data set. 5510/27558 images belong to the validation training set.
+validation_set = train_datagen.flow_from_directory(directory='/home/julia/datasets/cell_images',
+                                                   target_size = (224, 224),
+                                                   class_mode = 'categorical',
+                                                   batch_size = 32,
+                                                   subset = 'validation'
+                                                  )
+#Labels the images in train_set as 0 or 1; where 0=parasitized and 1=uninfected.
+train_set.labels
+
+#Labels the images in validation_set as 0 or 1.
+validation_set.labels
+
+#The model
+model = Sequential() #Sequential model allowing for building own layers.
+
+#Layer 1
+model.add(Conv2D(16, (3,3), input_shape = (224, 224, 3), padding='same', activation='relu')) #Convolution layer that extracts features from the image.
+model.add(MaxPool2D(2,2)) #Lets CNN recognize the image in any shape, size, or orientation.
+model.add(Dropout(0.2)) #Helps CNN from overfitting; it is set to 20% here.
+
+#Layer 2
+model.add(Conv2D(32, (3,3), padding='same', activation='relu')) #ReLU (rectifier function) in all layers adds non-linearity to the images.
+model.add(MaxPool2D(2,2))
+model.add(Dropout(0.3))
+
+#Layer 3
+model.add(Flatten())
+model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.5))
+
+#Layer 4
+model.add(Dense(2, activation='softmax')) #Dense layer helps with making predictions; softmax for probabilities.
+
+#Summary of the model
+model.summary()
+
+#Model compilation in order to move on to training
+model.compile(optimizer='adam', 
+              loss='categorical_crossentropy', 
+              metrics = ['accuracy'])
+
+#Model training using model.fit
+history = model.fit_generator(generator=train_set,
+                             steps_per_epoch = len(train_set),
+                             epochs = 5,
+                             validation_data = validation_set,
+                             validation_steps = len(validation_set))
+
+#Summary of the model training per epoch.
+history.history
+
+#Plotting to see if there is over-fitting or under-fitting in the model.
+def plot_learningCurve(history, epoch):
+    #Plot training and validation accuracy values
+    epoch_range = range(1, epoch+1)
+    plt.plot(epoch_range, history.history['accuracy'])
+    plt.plot(epoch_range, history.history['val_accuracy'])
+    plt.title('Model Accuracy')
+    plt.ylabel('Accuracy')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Validation'], loc='upper left')
+    plt.show()
+    
+    #Plot training and validation loss values
+    plt.plot(epoch_range, history.history['loss'])
+    plt.plot(epoch_range, history.history['val_loss'])
+    plt.title('Model Loss')
+    plt.ylabel('Loss')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Validation'], loc='upper left')
+    plt.show()
+    
+#Code adapted from laxmimerit here: https://github.com/laxmimerit/Malaria-Classification-Using-CNN
+
+#Visualization of the plots; history is the model, and 5 is number of epochs
+plot_learningCurve(history, 5)
+
+#Save model as a file
+model.save('model_sequential.h5')
+
+
+
+
