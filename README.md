@@ -11,7 +11,7 @@ The purpose of this project is to explore deep learning techniques and CNNs in o
 
 # Background
 
-According to the CDC, malaria is, "...a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans." In short, when an individual becomes infected, the parasite matures in the liver, and then move to red blood cells which eventually rupture and start their lifecycle over again. Those with malaria generally develop mild to severe fever and flu-like symptoms; in some cases, serious complications occur that can be life-threatening such as blood clots, severe anemia, seizures, and comas. Each year, nearly 290 million people become infected with malaria, and over 400,000 end up dying from the disease (MayoClinic, 2021). 
+According to the CDC, malaria is, "...a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans." Those with malaria generally develop mild to severe fever and flu-like symptoms; in some cases, serious complications occur that can be life-threatening such as blood clots, severe anemia, seizures, and comas. Each year, nearly 290 million people become infected with malaria, and over 400,000 end up dying from the disease (MayoClinic, 2021). 
 
 ![image](https://user-images.githubusercontent.com/70441161/109417348-83dcea00-7980-11eb-882f-4484f5fc1022.png)
 
@@ -22,4 +22,6 @@ One way that could help diagnose the disease is through machine learning and aut
 
 # References
 
-![image](https://user-images.githubusercontent.com/70441161/109417776-3f524e00-7982-11eb-99a0-93b0caff0e74.png)
+![image](https://user-images.githubusercontent.com/70441161/109467292-35832600-7a28-11eb-9fa9-707059276ad1.png)
+![image](https://user-images.githubusercontent.com/70441161/109467319-416ee800-7a28-11eb-9d32-0fc28236b70c.png)
+
