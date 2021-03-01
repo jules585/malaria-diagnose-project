@@ -16,6 +16,6 @@ The process of detecting infection is usually done by trained laboratory profess
 
 # References
 
-![image](https://user-images.githubusercontent.com/70441161/109467292-35832600-7a28-11eb-9fa9-707059276ad1.png)
+![image](https://user-images.githubusercontent.com/70441161/109467866-0c16ca00-7a29-11eb-8217-ca8c62dfa49a.png)
 ![image](https://user-images.githubusercontent.com/70441161/109467319-416ee800-7a28-11eb-9d32-0fc28236b70c.png)
 
