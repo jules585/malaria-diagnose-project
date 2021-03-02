@@ -84,7 +84,7 @@ Future work could  include:
 - Coding/App for prediction that outputs whether the input image is infected or uninfected.
 - Each parasite species has a unique lifecycle that can be detected in blood smears. If the dataset images support this, the model could be trained to recognize what species of parasite is infecting the host.
 
-In all, I gained a new understanding and appreciation of Deep Learning and CNNs, where I previously had none.
+In all, I gained a new understanding and appreciation of Deep Learning and CNNs.
 
 
 # References
