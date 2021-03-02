@@ -48,9 +48,27 @@ I built my model 4 layers deep. As an example, Layer #1 begins with the convolut
 
 Layer #3 introduces Flatten and Dense. Flatten turns the pooling into a 1-dimensional array. Dense is the fully connected layer, which is where pooling and flattening come together and classification happens. 
 
-Each layer uses the ReLU function to introduce non-linearity to each layer.
+Each layer uses the ReLU function to introduce non-linearity. Images are naturally non-linear, so without ReLU, the images would not be read correctly.
 
 Compiling is the last step before actually running the model, it defines what optimizer is being used, how loss/error/or deviations will be found in the model, and then metrics defines how the model will be evaluated. Metrics was set to 'accuracy' because I want to see how accurate my model is for the problem defined.
+
+# Results
+
+I ran my model for 5 epochs. An epoch is where the entire dataset is ran through the neural network once. In each epoch, it is learning from the last and accuracy is increasing. I did not use a GPU, only a CPU, so running those 5 epochs took around 30 mins to complete in total.
+
+My final accuracy was 94%. 
+
+![image](https://user-images.githubusercontent.com/70441161/109723173-f6a9b900-7b6a-11eb-8894-df9a7594a21c.png)
+
+Image 3: Plotting my model accuracy and model loss per epoch-- each against the training set and validation set.
+
+# Discussion
+
+My final accuracy was 0.9348, which means that it is correctly classifying the images in the dataset as either Parasitized or Uninfected 94% of the time. This is a high accuracy, however, in healthcare, it is typically desired to have an accuracy of 97-100% because it decreases the chance of false-positives or false-negatives. This is especially important to cases such as treating malaria because a false-positive could lead to unnecessary use of anti-parasitic drugs which could lead to resistance, and a false-negative could cost someone their life.
+
+My model is neither over-fitting nor under-fitting. This is seen in the plotted graphs, and it is also seen in the numbers for 'accuracy' vs val_accuracy.' Both are almost equal to each other, whicih supports the lack of over-fitting.
+
+
 
 # References
 
