@@ -71,7 +71,7 @@ Image 4: Plotting my model accuracy and model loss per epoch-- each against the 
 
 My final accuracy was 0.9348, which means that it is correctly classifying the images in the dataset as either Parasitized or Uninfected 94% of the time. This is a high accuracy, however, in healthcare, it is typically desired to have an accuracy of 97-100% because it decreases the chance of false-positives or false-negatives. This is especially important to cases such as treating malaria because a false-positive could lead to unnecessary use of anti-parasitic drugs which could lead to resistance, and a false-negative could cost someone their life.
 
-My model is neither over-fitting nor under-fitting. This is seen in the plotted graphs, and it is also seen in the numbers for 'accuracy' vs val_accuracy.' Both are almost equal to each other, whicih supports the lack of over-fitting.
+My model is neither over-fitting nor under-fitting. This is seen in the plotted graphs, and it is also seen in the numbers for 'accuracy' vs val_accuracy.' Both are almost equal to each other, which supports the lack of over-fitting.
 
 In order to increase accuracy, I could try using a pre-built model that contained more layers, or adding more layers to my current model while increasing the number of epochs. Increasing the number of epochs for my current 4-layer model would not make a significant change due to the size of model.
 
