@@ -18,7 +18,7 @@ The purpose of this project is to explore deep learning techniques and CNNs in o
 
 Image 1: Malaria lifecycle and areas of low, medium, and high transmittal.
 
-# Methods & Analysis
+# Methods
 
 # 1. Data Science Methods & Data Aquisition
 - Machine Learning --> Deep Learning --> Convolutional Neural Networks --> Classification
