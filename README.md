@@ -5,7 +5,7 @@ MSDS692 Spring2021 Project
 # 'Using Machine Learning to Diagnose Malaria'
 
 
-# Indtroduction
+# Introduction
 
 According to the CDC, malaria is, "...a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans." Those with malaria generally develop mild to severe fever and flu-like symptoms; in some cases, serious complications occur that can be life-threatening such as blood clots, severe anemia, seizures, and comas. Each year, nearly 290 million people become infected with malaria, and over 400,000 end up dying from the disease (MayoClinic, 2021). 
 
