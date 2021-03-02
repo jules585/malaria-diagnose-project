@@ -58,9 +58,13 @@ I ran my model for 5 epochs. An epoch is where the entire dataset is ran through
 
 My final accuracy was 94%. 
 
+![image](https://user-images.githubusercontent.com/70441161/109724153-58b6ee00-7b6c-11eb-9805-3f6ae8b580d3.png)
+
+Image 3: Results of running the model. Accuracy and loss per epoch, with final ending in Epoch 5.
+
 ![image](https://user-images.githubusercontent.com/70441161/109723173-f6a9b900-7b6a-11eb-8894-df9a7594a21c.png)
 
-Image 3: Plotting my model accuracy and model loss per epoch-- each against the training set and validation set.
+Image 4: Plotting my model accuracy and model loss per epoch-- each against the training set and validation set.
 
 # Discussion
 
@@ -68,6 +72,18 @@ My final accuracy was 0.9348, which means that it is correctly classifying the i
 
 My model is neither over-fitting nor under-fitting. This is seen in the plotted graphs, and it is also seen in the numbers for 'accuracy' vs val_accuracy.' Both are almost equal to each other, whicih supports the lack of over-fitting.
 
+In order to increase accuracy, I could try using a pre-built model that contained more layers, or adding more layers to my current model while increasing the number of epochs. Increasing the number of epochs for my current 4-layer model would not make a significant change due to the size of model.
+
+# Conclusion
+
+I was succcessfully able to build a CNN model that can accurately predict if a blood smear image is infected or not infected with the malaria parasite 94% of the time.
+
+Future work could  include:
+- Increase accuracy
+- Coding/App for prediction that outputs whether the input image is infected or uninfected.
+- Each parasite species has a unique lifecycle that can be detected in blood smears. If the dataset images support this, the model could be trained to recognize what species of parasite is infecting the host.
+
+In all, I gained a new understanding and appreciation of Deep Learning and CNNs, where I previously had none.
 
 
 # References
