@@ -4,6 +4,7 @@ MSDS692 Spring2021 Project
 
 # 'Using Machine Learning to Diagnose Malaria'
 
+Link to Video Presentation: https://youtu.be/lhXE51U9BaQ
 
 # Introduction
 
